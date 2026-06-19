@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Shield, Lock, AlertTriangle, Eye, Activity, Database, FileText, Smartphone } from 'lucide-react';
 
-const API_BASE = 'http://localhost:8000';
+const API_BASE = import.meta.env.VITE_API_BASE || 'https://your-render-url.onrender.com';
 
 function App() {
   const [securityData, setSecurityData] = useState({
